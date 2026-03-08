@@ -30,7 +30,7 @@ with st.sidebar:
     st.warning(
         "⚠️ **Live Execution Notice:**\n\n"
         "Clicking 'Run' will trigger a live 5-agent AI pipeline. The agents will scrape the web, read articles, and fact-check each other in real-time.\n\n"
-        "**This process takes roughly 5 to 10 minutes.** Please do not close or refresh the page while the spinner is active."
+        "**This process takes roughly 15 to 20 minutes.** Please do not close or refresh the page while the spinner is active."
     )
     
     if st.button("🚀 Run AI Analysis Now", use_container_width=True, type="primary"):
