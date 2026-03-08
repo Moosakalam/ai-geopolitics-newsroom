@@ -1,6 +1,7 @@
 streamlit
 crewai
 crewai-tools
+langchain
 langchain-google-genai
 pydantic
 python-dotenv
