@@ -29,7 +29,7 @@ with st.sidebar:
     if st.button("🚀 Run AI Analysis Now", use_container_width=True, type="primary"):
         with st.spinner("🤖 Agents are researching, writing, and editing... Please wait 3-5 minutes."):
             try:
-                subprocess.run(["python", "main.py"], check=True)
+                subprocess.run([sys.executable, "main.py"], check=True)
                 st.success("✅ Analysis generated successfully!")
                 st.rerun() 
             except Exception as e:
