@@ -1,0 +1,14 @@
+# Environments
+venv/
+env/
+.venv/
+
+# API Keys and Secrets
+.env
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Local Data (Optional: uncomment if you don't want to upload old reports)
+# outputs/
