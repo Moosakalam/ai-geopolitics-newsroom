@@ -26,10 +26,18 @@ with st.sidebar:
     st.markdown("### ⚙️ Mission Control")
     st.write("Trigger the multi-agent system to research and write a new report based on the latest data.")
     
+    # --- ADDED WARNING HERE ---
+    st.warning(
+        "⚠️ **Live Execution Notice:**\n\n"
+        "Clicking 'Run' will trigger a live 5-agent AI pipeline. The agents will scrape the web, read articles, and fact-check each other in real-time.\n\n"
+        "**This process takes roughly 5 to 10 minutes.** Please do not close or refresh the page while the spinner is active."
+    )
+    
     if st.button("🚀 Run AI Analysis Now", use_container_width=True, type="primary"):
-        with st.spinner("🤖 Agents are researching, writing, and editing... Please wait 3-5 minutes."):
+        with st.spinner("🤖 Agents are researching, writing, and editing... Please wait 5-10 minutes."):
             try:
-                subprocess.run([sys.executable, "main.py"], check=True)
+                # Updated to use sys.executable and -u for cloud compatibility and live logging
+                subprocess.run([sys.executable,"-u", "main.py"], check=True)
                 st.success("✅ Analysis generated successfully!")
                 st.rerun() 
             except Exception as e:
